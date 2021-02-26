@@ -1,0 +1,685 @@
+{
+  "current": {
+    "base_font": "avenir_next_n5",
+    "base_font_size": 16,
+    "base_font_color": "#333333",
+    "heading_font": "avenir_next_n5",
+    "heading_font_size": 26,
+    "heading_font_color": "#333333",
+    "links_color": "#333",
+    "links_color__hover": "#f1574b",
+    "btn_bg_color": "#f1574b",
+    "btn_text_color": "#fff",
+    "btn_bg_color__hover": "#e1382b",
+    "btn_text_color__hover": "#fff",
+    "btn_outline_bg_color": "#f1574b",
+    "btn_outline_text_color": "#f1574b",
+    "btn_outline_bg_color__hover": "#e1382b",
+    "btn_outline_text_color__hover": "#fff",
+    "page_bg_color": "#ffffff",
+    "header_bg_color": "#ffffff",
+    "footer_bg_color": "#ffffff",
+    "border_color": "#eeeeee",
+    "color_1": "#ffffff",
+    "color_2": "#333333",
+    "color_3": "#f1574b",
+    "color_4": "#fffcc1",
+    "color_5": "#f7f5f3",
+    "color_6": "#21bd9a",
+    "color_7": "#73d00f",
+    "color_8": "#1e1732",
+    "favicon": "",
+    "reviews_title": "Great",
+    "reviews_rating": 4,
+    "reviews_min": 2000,
+    "reviews_max": 2500,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "sections": {
+      "page_landing": {
+        "type": "page_landing",
+        "blocks": {
+          "1589838620954": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_01.jpg"
+            }
+          },
+          "1589838630740": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_02.jpg"
+            }
+          },
+          "1589838638513": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_03.jpg"
+            }
+          },
+          "1589838647166": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_04.jpg"
+            }
+          },
+          "1589838654537": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_05.jpg"
+            }
+          },
+          "1589838661722": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_06.jpg"
+            }
+          },
+          "1589838680621": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_07.jpg"
+            }
+          },
+          "1589838688403": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_08.jpg"
+            }
+          },
+          "1589838697229": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_09.jpg"
+            }
+          },
+          "1589838714717": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_10.jpg"
+            }
+          },
+          "1589838723374": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_11.jpg"
+            }
+          },
+          "1589838733125": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_12.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1589838620954",
+          "1589838630740",
+          "1589838638513",
+          "1589838647166",
+          "1589838654537",
+          "1589838661722",
+          "1589838680621",
+          "1589838688403",
+          "1589838697229",
+          "1589838714717",
+          "1589838723374",
+          "1589838733125"
+        ],
+        "settings": {
+          "header_flag_info": "Made in the USA",
+          "coupon_text__1": "25% off",
+          "coupon_text__2": "Activated",
+          "coupon_text__3": "Your first time buyer discount has been activated",
+          "coupon_text__4": "Limited time offer - Expires 04\/24\/2020",
+          "slide_1": "shopify:\/\/shop_images\/slide_01.png",
+          "slide_2": "shopify:\/\/shop_images\/slide_02.png",
+          "slide_3": "",
+          "slide_4": "",
+          "slider_title": "Our US Made, Delicious Chews Boost The Function Of Your Dog's Joints & Connective Tissue, Helping Renew Muscle Strength And Strong Bones For A Happy, Active Life!",
+          "slider_text": "We pride ourselves on providing only the best products for your pets, helping them feel happy, strong and healthy. This is why we’re offering our Joint Care Mobility Chews at a huge discount, so you can see how much happier your dog can be!",
+          "slider_btn_text": "Yes, my dog needs this",
+          "slider_btn_url": "shopify:\/\/pages\/landing",
+          "icons_1__icon": "icon_flag",
+          "icons_1__text": "Made in the USA",
+          "icons_2__icon": "icon_vet",
+          "icons_2__text": "Vet Formulated",
+          "icons_3__icon": "icon_fda",
+          "icons_3__text": "FDA-Regulated Facility",
+          "icons_4__icon": "icon_nobs",
+          "icons_4__text": "NO BS 90-day Warranty",
+          "form_tagline": "<p>DUE TO COVID-19, STOCK IS EXTREMELY LIMITED<\/p>\n<p><strong>ORDER TODAY FOR GUARANTEE DELIVERY<\/strong><\/p>",
+          "form_part_1__title": "1. Select Frequency",
+          "form_part_1__one_time": "One time purchase",
+          "form_part_1__recurring": "Monthy Autoship",
+          "form_part_2__title": "2. Select Package",
+          "form_part_2__product_1": "single-pack",
+          "form_part_2__product_2": "twin-pack",
+          "form_part_2__product_upsell": "dental-health-chews",
+          "form_info_btn_text": "Add to cart",
+          "form_info_label": "For questions call: +1 702-827-4738",
+          "form_shipping_label": "<p><strong>FREE SHIPPING<\/strong> ON ALL AUTO-SHIP &amp; MULTI-TUB ORDERS<\/p>",
+          "form_logo_paypal": true,
+          "form_logo_visa": true,
+          "form_logo_mastercard": true,
+          "form_logo_amex": true,
+          "guarantee_img": "shopify:\/\/shop_images\/guarantee.png",
+          "guarantee_title": "90 Day Money-Back Guarantee - It Works Or Your Money Back",
+          "guarantee_description": "Our #1 goal here at Wuffes is to ensure you are 100% satisfied . And if you're not entirely happy with your purchase we will refund your money in full, or exchange the goods. All we ask is that you contact our customer services and then return the product to us."
+        }
+      },
+      "page_landing__1": {
+        "type": "page_landing__1",
+        "settings": {
+          "header_flag_info": "Made in the USA",
+          "coupon_text__1": "25% off",
+          "coupon_text__2": "Activated",
+          "coupon_text__3": "Your first time buyer discount has been activated",
+          "coupon_text__4": "Limited time offer - Expires 04\/24\/2020",
+          "slide_1": "shopify:\/\/shop_images\/slide_01.png",
+          "slide_2": "shopify:\/\/shop_images\/slide_02.png",
+          "slide_3": "",
+          "slide_4": "",
+          "slider_title": "Our US Made, Delicious Chews Boost The Function Of Your Dog's Joints & Connective Tissue, Helping Renew Muscle Strength And Strong Bones For A Happy, Active Life!",
+          "slider_text": "We pride ourselves on providing only the best products for your pets, helping them feel happy, strong and healthy. This is why we’re offering our Joint Care Mobility Chews at a huge discount, so you can see how much happier your dog can be!",
+          "slider_btn_text": "Yes, my dog needs this",
+          "slider_btn_url": "shopify:\/\/pages\/landing",
+          "icons_1__icon": "icon_flag",
+          "icons_1__text": "Made in the USA",
+          "icons_2__icon": "icon_vet",
+          "icons_2__text": "Vet Formulated",
+          "icons_3__icon": "icon_fda",
+          "icons_3__text": "FDA-Regulated Facility",
+          "icons_4__icon": "icon_nobs",
+          "icons_4__text": "NO BS 90-day Warranty",
+          "form_tagline": "<p>DUE TO COVID-19, STOCK IS EXTREMELY LIMITED<\/p>\n<p><strong>ORDER TODAY FOR GUARANTEE DELIVERY<\/strong><\/p>",
+          "form_part_1__title": "1. Select Frequency",
+          "form_part_1__one_time": "One time purchase",
+          "form_part_1__recurring": "Monthy Autoship",
+          "form_part_2__title": "2. Select Package",
+          "form_part_2__product_1": "single-pack",
+          "form_part_2__product_2": "twin-pack",
+          "form_part_2__product_upsell": "dental-health-chews",
+          "form_info_btn_text": "Add to cart",
+          "form_info_label": "For questions call: +1 702-827-4738",
+          "form_shipping_label": "<p><strong>FREE SHIPPING<\/strong> ON ALL AUTO-SHIP &amp; MULTI-TUB ORDERS<\/p>",
+          "form_logo_paypal": true,
+          "form_logo_visa": true,
+          "form_logo_mastercard": true,
+          "form_logo_amex": true
+        }
+      },
+      "page_landing__2": {
+        "type": "page_landing__2",
+        "blocks": {
+          "1589934454541": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_01.jpg"
+            }
+          },
+          "1589934466703": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_02.jpg"
+            }
+          },
+          "1589934471255": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_03.jpg"
+            }
+          },
+          "1589934475529": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_04.jpg"
+            }
+          },
+          "1589934479940": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_05.jpg"
+            }
+          },
+          "1589934484677": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_06.jpg"
+            }
+          },
+          "1589934488735": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_07.jpg"
+            }
+          },
+          "1589934494285": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_08.jpg"
+            }
+          },
+          "1589934499719": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_09.jpg"
+            }
+          },
+          "1589934506433": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_10.jpg"
+            }
+          },
+          "1589934511580": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_11.jpg"
+            }
+          },
+          "1589934515421": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/dogs_12.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1589934454541",
+          "1589934466703",
+          "1589934471255",
+          "1589934475529",
+          "1589934479940",
+          "1589934484677",
+          "1589934488735",
+          "1589934494285",
+          "1589934499719",
+          "1589934506433",
+          "1589934511580",
+          "1589934515421"
+        ],
+        "settings": {}
+      },
+      "page_landing__3": {
+        "type": "page_landing__3",
+        "blocks": {
+          "1590352987705": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Jennifer Zapata",
+              "date": "56 minutes ago",
+              "title": "Excellent and fast service",
+              "text": "Excellent and fast service. The follow up phone calls are an added bonus, showing they truly want to make sure you are satisfied with your purchase. I am a repeat customer and will continue to purchase in the future!"
+            }
+          },
+          "1590353028786": {
+            "type": "review",
+            "settings": {
+              "rating": "4",
+              "name": "Jennifer Zapata",
+              "date": "56 minutes ago",
+              "title": "Excellent and fast service",
+              "text": "Very happy with these guys! I’m new and my first experience with Frames Direct couldn’t have been better! My quick story: I waited over 2 months on new frames from my eye doctor. Backordered Ray Bans they said with the virus and all. Ok. But after 2 months of waiting, I went shopping on line for them. Found them here. Ordered them. New customer and all and they were in my hands in a week. Great job! I’ll be back and great customer follow up too!"
+            }
+          },
+          "1590353052067": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Brian Turrill",
+              "date": "47 hours ago",
+              "title": "Happy with my glasses but shipping was…",
+              "text": "Happy with my glasses but shipping was horrible. Didnt get my glasses until 9:45pm when supposed to have them by 9pm. I think they should refund my shipping wasnt on time."
+            }
+          },
+          "1590353066864": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Rebecca Lynn Hereford",
+              "date": "47 hours ago",
+              "title": "They had what I was looking…",
+              "text": "Glasses were perfect! Exactly what I was looking for and the shipping was fast!!! I will definitely be ordering again."
+            }
+          },
+          "1590353099489": {
+            "type": "review",
+            "settings": {
+              "rating": "4",
+              "name": "Bernadine Mills",
+              "date": "2 days ago",
+              "title": "Honest This is the second time I have…",
+              "text": "Honest This is the second time I have gotten glasses from here,the first pair were fine But these they did not take long to ship they got my prescription down to the tee this glasses are FANTASTIC.I love Frames Direct all my eyewear will come from them again and always."
+            }
+          },
+          "1590353114637": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Roy England II",
+              "date": "3 days ago",
+              "title": "Fantastic prices and quick shipping",
+              "text": "Fantastic prices and quick shipping. My order was for some slick new Raybans. I’ll be returning for my next pair."
+            }
+          },
+          "1590353129445": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "David DeLeon",
+              "date": "3 days ago",
+              "title": "THE BEST!!!",
+              "text": "Great service. First time iv been called by a retailer to ask how there service was.\nProduct arrive in a short period of time.\nI just bought frames not lenses but very satisfied with the transaction!"
+            }
+          },
+          "1590353146746": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Andrew Park",
+              "date": "3 days ago",
+              "title": "Good product and good service.",
+              "text": "Service is very straight forward and easy to use. Chose frames online, placed order, frames delivered with good, sturdy packaging. Overall very satisfied with the product ans service. Will probably look to purchase more frames."
+            }
+          },
+          "1590353172979": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "GS",
+              "date": "3 days ago",
+              "title": "Very happy with my glasses, this company is legit!",
+              "text": "I have never ordered glasses online before but due to everything being shut down from Covid, I really had no other options. I was extremely skeptical because of all the horror stories of buying glasses online so I was half expecting to get scammed. Luckily I didn't! I was looking for a specific pair I had tried on at my local optical store that has since"
+            }
+          },
+          "1590353194212": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Kristie Harrison",
+              "date": "4 days ago",
+              "title": "I received my glasses and I am really…",
+              "text": "I received my glasses and I am really satisfied with my purchase. You guys will always get my business. Thank you"
+            }
+          },
+          "1590353223038": {
+            "type": "review",
+            "settings": {
+              "rating": "5",
+              "name": "Katie Miterko",
+              "date": "4 days ago",
+              "title": "Definitely recommend",
+              "text": "Frames came quickly and were exactly what my son was looking for. The eye doctor was going to charge me double for the same frames. I saved a ton of money going through Frames Direct. I will definitely be using again!"
+            }
+          }
+        },
+        "block_order": [
+          "1590352987705",
+          "1590353028786",
+          "1590353052067",
+          "1590353066864",
+          "1590353099489",
+          "1590353114637",
+          "1590353129445",
+          "1590353146746",
+          "1590353172979",
+          "1590353194212",
+          "1590353223038"
+        ],
+        "settings": {}
+      },
+      "page_landing__4": {
+        "type": "page_landing__4",
+        "blocks": {
+          "1589935581875": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/solutions_1.jpeg",
+              "title": "1. The Problem",
+              "text": "As dogs grows older, they begin to find it harder to do daily activities, even short walks can become a struggle. Watching your canine struggle with joint and hip stiffness can be incredibly hard, especially when pain relievers only leave them drowsy and tired."
+            }
+          },
+          "1589935615905": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/solutions_2.jpeg",
+              "title": "2. The Solution",
+              "text": "Our ingredients work to encourage the production of collagen and proteoglycan, both important in the production of joint cartilage, which means less aching and suffering, even for senior dogs."
+            }
+          },
+          "1589935630720": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/solutions_3.jpeg",
+              "title": "3. Joint & Mobility chews",
+              "text": "Choose our bites to help keep your dog feel stronger, flexible and comfortable. 100% satisfaction guaranteed!"
+            }
+          }
+        },
+        "block_order": [
+          "1589935581875",
+          "1589935615905",
+          "1589935630720"
+        ],
+        "settings": {
+          "title": "Your Pups Problems are a thing of the past!"
+        }
+      },
+      "page_landing__5": {
+        "type": "page_landing__5",
+        "blocks": {
+          "1589935847582": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/compare_1.jpeg",
+              "title": "Your dog using Wuffes.",
+              "text": "<p>Irresistable and natural ingredients.  <\/p>\n<p>Helps with swelling and flexibility.  <\/p>\n<p>Provides support so your dog can feel comfortable, happy and healthy.  <\/p>\n<p>Supports the natural production of cartilage to ease joint problems.<\/p>"
+            }
+          },
+          "1589935999753": {
+            "type": "item",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/compare_2.jpeg",
+              "title": "You’re using the wrong supplement!",
+              "text": "<p>Leaves your dog feeling drowsy.  <\/p>\n<p>Ineffective &ndash; won&rsquo;t target the cause of the pain.  <\/p>\n<p>Unnecessary chemicals and nasties.  <\/p>\n<p>Possible Side effects.  <\/p>\n<p>Animal-Tested - Unethical Treatment Harms Animals and Your Conscience.  <\/p>\n<p>Other Dangers - Unknown Ingredients and Unnatural Substances.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1589935847582",
+          "1589935999753"
+        ],
+        "settings": {
+          "title": "You’re using the wrong supplement!"
+        }
+      },
+      "page_landing__6": {
+        "type": "page_landing__6",
+        "blocks": {
+          "1590003683993": {
+            "type": "item",
+            "settings": {
+              "page": "what-are-the-ingredients"
+            }
+          },
+          "1590004732559": {
+            "type": "item",
+            "settings": {
+              "page": "what-age-can-my-pup-start-using-these"
+            }
+          },
+          "1590004817433": {
+            "type": "item",
+            "settings": {
+              "page": "are-they-gluten-and-grain-free"
+            }
+          }
+        },
+        "block_order": [
+          "1590003683993",
+          "1590004732559",
+          "1590004817433"
+        ],
+        "settings": {
+          "title": "Your dog deserves to live the longest, healthiest life they can!",
+          "btn_text": "YES, MY DOG NEEDS THIS"
+        }
+      },
+      "page_landing__guarantee": {
+        "type": "page_landing__guarantee",
+        "settings": {
+          "guarantee_img": "shopify:\/\/shop_images\/guarantee.png",
+          "guarantee_title": "90 Day Money-Back Guarantee - It Works Or Your Money Back",
+          "guarantee_description": "Our #1 goal here at Wuffes is to ensure you are 100% satisfied . And if you're not entirely happy with your purchase we will refund your money in full, or exchange the goods. All we ask is that you contact our customer services and then return the product to us."
+        }
+      },
+      "page_landing__footer": {
+        "type": "page_landing__footer",
+        "blocks": {
+          "1590095870468": {
+            "type": "navigation",
+            "settings": {
+              "links_1": "footer",
+              "links_2": "main-menu"
+            }
+          },
+          "1590096040507": {
+            "type": "contacts",
+            "settings": {
+              "part_1_title": "Contact Us",
+              "part_1_content": "<p><a href=\"tel:18772273631\" title=\"tel:18772273631\">1 (877) 227-3631<\/a><\/p>\n<p><a href=\"mailto:mail@mail.com\" title=\"mailto:mail@mail.com\">Email Us<\/a><\/p>",
+              "part_2_title": "Follow Us",
+              "part_2_content": "<p>[instagram]<\/p>\n<p>@careof<\/p>\n<p>[facebook][twitter]<\/p>\n<p>@careofvitamins<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1590095870468",
+          "1590096040507"
+        ],
+        "settings": {}
+      },
+      "page_landing__form": {
+        "type": "page_landing__form",
+        "blocks": {
+          "1590444119119": {
+            "type": "product",
+            "settings": {
+              "product": "single-pack"
+            }
+          },
+          "1590444127204": {
+            "type": "product",
+            "settings": {
+              "product": "twin-pack"
+            }
+          },
+          "1590444132835": {
+            "type": "upsell",
+            "settings": {
+              "upsell": "dental-health-chews"
+            }
+          }
+        },
+        "block_order": [
+          "1590444119119",
+          "1590444127204",
+          "1590444132835"
+        ],
+        "settings": {
+          "form_tagline": "<p>DUE TO COVID-19, STOCK IS EXTREMELY LIMITED<\/p>\n<p><strong>ORDER TODAY FOR GUARANTEE DELIVERY<\/strong><\/p>",
+          "part_1__title": "1. Select Frequency",
+          "part_1__onetime": "One time purchase",
+          "part_1__subscription": "Monthy Autoship",
+          "part_1__details": "<p><strong>Save 25%, Cancel Anytime<\/strong> <a href=\"\/pages\/landing\" title=\"landing\">see details<\/a><\/p>",
+          "part_2__title": "2. Select Package",
+          "button_text": "Add to cart",
+          "info_label": "For questions call: +1 702-827-4738",
+          "shipping_label": "<p><strong>FREE SHIPPING<\/strong> ON ALL AUTO-SHIP &amp; MULTI-TUB ORDERS<\/p>",
+          "logo_paypal": true,
+          "logo_visa": true,
+          "logo_mastercard": true,
+          "logo_amex": true
+        }
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Default": {
+      "content_for_index": []
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "content_for_index": []
+    }
+  }
+}

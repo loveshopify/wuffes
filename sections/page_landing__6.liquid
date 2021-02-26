@@ -1,0 +1,88 @@
+<div class="landing_accordions">
+
+	<div class="container landing_accordions__container">
+
+		<h2 class="landing_accordions__title">{{ section.settings.title }}</h2>
+
+	</div>
+
+	<div class="landing_accordions__btn_wrap">
+
+		<div class="container landing_accordions__container">
+
+			<a class="landing_btn landing_btn__scroll landing_accordions__btn" href="">{{ section.settings.btn_text }}{%- render 'icon', icon:'angle_right_double', class:'landing_btn__icon' -%}</a>
+
+		</div>
+
+	</div>
+
+	<div class="landing_accordions__wrapper">
+
+		<div class="container landing_accordions__container">
+
+			{%- for block in section.blocks -%}
+
+				<div class="landing_accordions__item">
+
+					<a class="landing_accordions__item_title" data-target="#accordion_{{ block.id }}" href="#">{{ pages[block.settings.page].title }}{%- render 'icon', icon:'angle_down', class:'landing_accordions__icon' -%}</a>
+
+					<div id="accordion_{{ block.id }}" class="landing_accordions__item_content" style="display: none;">
+						<div class="landing_accordions__item_content__wrapper">
+							{{ pages[block.settings.page].content }}
+						</div>
+					</div>
+
+				</div>
+
+			{%- endfor -%}
+
+		</div>
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Part 6: accordions",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Settings"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type": "text",
+			"id": "btn_text",
+			"label": "Button text"
+		}
+	],
+	"blocks": [
+		{
+			"type": "item",
+			"name": "Item",
+			"settings": [
+				// {
+				// 	"type": "text",
+				// 	"id": "title",
+				// 	"label": "Title"
+				// },
+				// {
+				// 	"type": "richtext",
+				// 	"id": "text",
+				// 	"label": "Text"
+				// },
+				{
+					"type": "page",
+					"id": "page",
+					"label": "Content"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

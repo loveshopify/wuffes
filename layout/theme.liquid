@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="{{ shop.locale }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+		<meta name="theme-color" content="{{ settings.color_button }}">
+
+		<title>{{ page_title }} &ndash; {{ shop.name }}</title>
+
+		<link rel="canonical" href="{{ canonical_url }}">
+
+		{%- if page_description -%}
+			<meta name="description" content="{{ page_description | escape }}">
+		{%- endif -%}
+
+		<style>
+			html {padding: 0 !important;}
+
+			#preview-bar-iframe {display: none !important;}
+
+			/*body {overflow-x: hidden;}*/
+
+			@-moz-keyframes spin {
+				30% {-moz-transform: scaleX(0);}
+				60% {-moz-transform: scaleX(1);}
+			}
+			@-webkit-keyframes spin {
+				30% {-webkit-transform: scaleX(0);}
+				60% {-webkit-transform: scaleX(1);}
+			}
+			@keyframes spin {
+				30% {-webkit-transform: scaleX(0);transform: scaleX(0);}
+				60% {-webkit-transform: scaleX(1);transform: scaleX(1);}
+			}
+
+			#page_preloader {width: 100vw;height: 100vh;background: #fff;position: fixed;left: 0;top: 0;z-index: 10010;
+			-webkit-transition: opacity .15s ease-in-out .15s;
+					transition: opacity .15s ease-in-out .15s;
+
+			-webkit-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+			}
+
+			#page_preloader svg {width: 60px;height: 60px;margin: -30px 0 0 -30px;position: absolute;left: 50%;top: 50%;z-index: 10011;
+			-webkit-animation: spin 1s linear infinite;
+					animation: spin 1s linear infinite;
+			}
+
+			#page_preloader.off {opacity: 0;}
+
+		</style>
+
+		<script>
+
+			// LAZY LOAD IMAGES
+			document.addEventListener('DOMContentLoaded', function() {
+				yall({
+					observeChanges: true
+				});
+			});
+
+			// LOADCSS
+			!function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=f[f.length-1]}var l=a.styleSheets;if(o)for(var s in o)o.hasOwnProperty(s)&&d.setAttribute(s,o[s]);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var u=function(e){for(var t=d.href,n=l.length;n--;)if(l[n].href===t)return e();setTimeout(function(){u(e)})};function c(){d.addEventListener&&d.removeEventListener("load",c),d.media=r||"all"}return d.addEventListener&&d.addEventListener("load",c),d.onloadcssdefined=u,u(c),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+
+			// LOADCSS CALLBACK
+			function onloadCSS(n,a){var t;function d(){!t&&a&&(t=!0,a.call(n))}n.addEventListener&&n.addEventListener("load",d),n.attachEvent&&n.attachEvent("onload",d),"isApplicationInstalled"in navigator&&"onloadcssdefined"in n&&n.onloadcssdefined(d)};
+
+		</script>
+
+		{{ content_for_header }}
+
+	</head>
+
+	<body>
+
+		<div id="page_preloader">
+			{%- render 'asset_puppy' -%}
+		</div>
+
+		{{ content_for_layout }}
+
+		<script src="{{ 'jquery.3.5.1.min.js' | asset_url }}" defer></script>
+		<script src="{{ 'yall.min.js' | asset_url }}" defer></script>
+		<script src="{{ 'swiper.4.4.1.min.js' | asset_url }}" defer></script>
+		<script src="{{ 'scripts.js' | asset_url }}" defer></script>
+
+		<script id="styles_main">
+			// loadCSS( '//fonts.googleapis.com/css?family=Montserrat:400,600,800' );
+			// loadCSS( '//fonts.googleapis.com/css?family=Gothic+A1:400,600,700&display=swap' );
+			var stylesMain = loadCSS( '{{ 'styles.scss.css' | asset_url }}', document.getElementById('styles_main') );
+		</script>
+
+		<script>
+			var preloader = document.getElementById('page_preloader');
+
+			onloadCSS( stylesMain, function() {
+
+				preloader.classList.add('off');
+
+				setTimeout(function() {
+
+					preloader.outerHTML = '';
+
+				}, 150);
+
+				var stylesTimer = setInterval( function() {
+
+					if ( typeof themeInit !== 'undefined' ) {
+
+						themeInit();
+
+						clearTimeout( stylesTimer );
+					};
+
+				}, 11 );
+
+			});
+
+		</script>
+
+	</body>
+
+</html>

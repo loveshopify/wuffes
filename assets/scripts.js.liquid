@@ -1,0 +1,142 @@
+themeInit = function() {
+
+	jQuery(function($){
+
+
+		// HEADER FLAG
+		$(document).on('click', '#landing_header__link_flag', function(e) {
+
+			e.preventDefault();
+
+			var thisTarget = $(this).data('target');
+
+			$(thisTarget).toggleClass('active');
+
+		});
+
+		$(document).on('click', '#landing_header__link_flag__info', function(e) {
+
+			e.stopPropagation();
+
+		});
+
+
+		// HEADER CART
+		$(document).on('submit', '#landing_header__form', function(e) {
+
+			// e.preventDefault();
+
+		});
+
+
+		// BUTTONS
+		$(document).on('click', '.landing_btn__scroll', function(e) {
+
+			e.preventDefault();
+
+			$('html, body').animate({
+				scrollTop: $('.landing_form').offset().top
+			}, 1000);
+
+		});
+
+
+		// SLIDER
+		var landingSlider = new Swiper( $('#landing_slider__swiper'), {
+			loop: true,
+			slidesPerView: 1,
+			// effect:'fade',
+
+			pagination: {
+				el: '#landing_slider__pagination',
+				type: 'bullets',
+				clickable: true
+			},
+
+			// on: {
+			// 	init: function () {
+			// 		// galleryImages.addClass('swiper_slider__ready');
+			// 		// thumbsList.addClass('product_images__thumbs_ready');
+			// 	},
+			// }
+
+		});
+
+
+		// PRODUCT IMAGES SLIDER
+		var productImagesSlider = new Swiper( $('#landing_form__product_slider'), {
+			slidesPerView: 1,
+			touchRatio: 0,
+			// noSwiping: true,
+			// shortSwipes: false,
+			// longSwipes: false,
+		});
+
+
+		// PRODUCT SWITCH
+		$(document).on('change', '.form_control__product', function() {
+
+			var slideIndex = $(this).data('index') - 1;
+			var thisPrice = $(this).data('price');
+			var thisDiscount = $(this).data('discount');
+
+			productImagesSlider.slideTo(slideIndex);
+
+			$('#landing_form__price').html(thisPrice);
+			$('#landing_form__save').html(thisDiscount);
+
+		});
+
+
+		// ACCORDIONS
+		$(document).on('click', '.landing_accordions__item_title', function(e) {
+
+			e.preventDefault();
+
+			var targetContent = $(this).data('target');
+
+			$(targetContent).slideToggle(300);
+
+		});
+
+
+		// REVIEWS
+		var landingReviewsSlider = new Swiper( $('#landing_reviews__slider'), {
+			loop: true,
+			slidesPerView: 1,
+			autoHeight: true,
+			// effect:'fade',
+
+			pagination: {
+				el: '#landing_reviews__slider_pagination',
+				type: 'bullets',
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + '</span>';
+				},
+				clickable: true
+			},
+
+			// on: {
+			// 	init: function () {
+			// 		// galleryImages.addClass('swiper_slider__ready');
+			// 		// thumbsList.addClass('product_images__thumbs_ready');
+			// 	},
+			// }
+
+		});
+
+		$(document).on('click', '.landing_reviews__item_readmore', function(e) {
+
+			e.preventDefault();
+
+			var targetBlock = $(this).attr('data-target');
+
+			$(targetBlock).removeClass('landing_reviews__item_collapsed');
+
+			landingReviewsSlider.update();
+
+		});
+
+	});
+
+};

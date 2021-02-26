@@ -1,0 +1,42 @@
+<div class="landing_guarantee">
+
+	<div class="container landing_guarantee__container">
+
+		<img class="landing_guarantee__img" src="{{ section.settings.guarantee_img | img_url:'120x120', crop:'center' }}" alt="{{ section.settings.guarantee_img.alt }}">
+
+		<h2 class="landing_guarantee__title">{{ section.settings.guarantee_title }}</h2>
+
+		<p class="landing_guarantee__description">{{ section.settings.guarantee_description }}</p>
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Guarantee",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Guarantee section"
+		},
+		{
+			"type": "image_picker",
+			"id": "guarantee_img",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "guarantee_title",
+			"label": "Title",
+			"default": "90 Day Money-Back Guarantee - It Works Or Your Money Back"
+		},
+		{
+			"type": "textarea",
+			"id": "guarantee_description",
+			"label": "Description",
+			"default": "Our #1 goal here at Wuffes is to ensure you are 100% satisfied . And if you're not entirely happy with your purchase we will refund your money in full, or exchange the goods. All we ask is that you contact our customer services and then return the product to us."
+		}
+	]
+}
+{% endschema %}

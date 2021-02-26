@@ -1,0 +1,598 @@
+
+
+		<div class="landing_header">
+
+			<div class="container landing_header__container">
+
+				<div class="landing_header__left">
+					<a id="landing_header__link_flag" class="landing_header__link landing_header__link_flag" data-target="#landing_header__link_flag__info" href="#">
+						{%- render 'icon', icon:'flag_usa', class:'landing_header__icon' -%}
+						<span id="landing_header__link_flag__info" class="landing_header__link_flag__info">{{ section.settings.header_flag_info }}</span>
+					</a>
+				</div>
+
+				<a class="landing_header__center landing_header__logo" href="{{ page.url }}">
+					{%- render 'asset_wuffes_logo' -%}
+				</a>
+
+				<div class="landing_header__right">
+					<a href="/checkout" class="landing_header__link landing_header__link_cart">
+						{%- render 'icon', icon:'cart', class:'landing_header__icon' -%}
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="landing_coupon">
+			<div class="container landing_coupon__container">
+				<div class="landing_coupon__content">
+					<div class="landing_coupon__left">
+						<p class="landing_coupon__text_1">{{ section.settings.coupon_text__1 }}</p>
+						<p class="landing_coupon__text_2">{{ section.settings.coupon_text__2 }}</p>
+					</div>
+
+					<div class="landing_coupon__right">
+						<p class="landing_coupon__text_3">{{ section.settings.coupon_text__3 }}</p>
+						<p class="landing_coupon__text_4">{{ section.settings.coupon_text__4 }}</p>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="landing_slider">
+			<div class="container landing_slider__container">
+				<div class="landing_slider__slides">
+					<div id="landing_slider__swiper" class="swiper-container landing_slider__swiper">
+						<div class="swiper-wrapper">
+							{%- for i in (1..4) -%}
+								{%- assign slide_image = 'slide_' | append:i -%}
+								{%- assign slide_image = section.settings[slide_image] -%}
+
+								{%- if slide_image.size > 0 -%}
+									<div class="swiper-slide">
+										<img src="{{ slide_image.src | img_url:'620x620', crop:'center' }}" alt="{{ slide_image.alt }}">
+									</div>
+								{%- endif -%}
+
+							{%- endfor -%}
+
+						</div>
+
+						<div id="landing_slider__pagination" class="swiper-pagination landing_slider__pagination"></div>
+
+					</div>
+
+				</div>
+
+				<div class="landing_slider__content">
+
+					<h2 class="landing_slider__title">{{ section.settings.slider_title }}</h2>
+
+					<p class="landing_slider__text">{{ section.settings.slider_text }}</p>
+
+					<div class="landing_slider__btn_wrap">
+						<a class="landing_btn landing_slider__btn" href="{{ section.settings.slider_btn_url }}">{{ section.settings.slider_btn_text }}{%- render 'icon', icon:'angle_right_double', class:'landing_btn__icon' -%}</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="landing_icons">
+			<div class="container landing_icons__container">
+				<div class="landing_icons__wrapper">
+					{%- for i in (1..4) -%}
+						{%- assign item_icon = 'icons_' | append:i | append:'__icon' -%}
+						{%- assign item_icon = section.settings[item_icon] -%}
+
+						{%- assign item_text = 'icons_' | append:i | append:'__text' -%}
+						{%- assign item_text = section.settings[item_text] -%}
+
+						<div class="landing_icons__item">
+							<div class="landing_icons__item_icon">{%- render 'icon', icon:item_icon -%}</div>
+
+							<div class="landing_icons__item_text">{{ item_text }}</div>
+						</div>
+
+					{%- endfor -%}
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="landing_form">
+
+			<div class="container landing_form__container">
+
+				{%- assign product_1 = all_products[section.settings.form_part_2__product_1] -%}
+				{%- assign product_2 = all_products[section.settings.form_part_2__product_2] -%}
+				{%- assign product_upsell = all_products[section.settings.form_part_2__product_upsell] -%}
+
+				<h3 class="landing_form__tagline">{{ section.settings.form_tagline }}</h3>
+
+				<h2 class="landing_form__title">{{ section.settings.form_part_1__title }}</h2>
+
+				<input id="purchase_type__onetime" class="form_control" type="radio" name="purchase_type" value="one-time">
+				<label for="purchase_type__onetime">{{ section.settings.form_part_1__one_time }}</label>
+
+				<input id="purchase_type__recurring" class="form_control" type="radio" name="purchase_type" value="recurring" checked="checked">
+				<label for="purchase_type__recurring">{{ section.settings.form_part_1__recurring }}</label>
+
+				<h2 class="landing_form__title">{{ section.settings.form_part_2__title }}</h2>
+
+				<div class="landing_form__product_tabs">
+
+					<a class="landing_form__product_tab__1" href="#">{{ product_1.title }}</a>
+					<a class="landing_form__product_tab__2" href="#">{{ product_2.title }}</a>
+
+				</div>
+
+				<div class="landing_form__product_image">
+					<img src="{{ product_1.featured_image | img_url:'300x300', crop:'center' }}" alt="{{ product_1.featured_image.alt }}">
+				</div>
+
+				<div class="landing_form__product_price">{{ product_1.price | money }}</div>
+
+				<div class="landing_form__product_save">You save 25% off & FREE Shipping</div>
+
+				<input id="landing_form__upsell" class="form_control" type="checkbox" name="upsell" value="upsell">
+				<label for="landing_form__upsell">Add Our Best-Selling {{ product_upsell.title }} to your order for {{ product_upsell.price | money }} (50% Off)</label>
+
+				<button class="landing_btn landing_form__btn">{{ section.settings.form_info_btn_text }} {%- render 'icon', icon:'angle_right_double', class:'landing_btn__icon' -%}</button>
+
+				<p class="landing_form__info_label">{{ section.settings.form_info_label }}</p>
+
+				<div class="landing_form__shipping_label">{{ section.settings.form_shipping_label }}</div>
+
+				<nav class="landing_form__logos">
+
+					{%- assign payment_logos = 'paypal,visa,mastercard,amex' -%}
+					{%- assign payment_logos = payment_logos | split:',' -%}
+
+					{%- for logo in payment_logos -%}
+
+						{%- assign show_logo = 'form_logo_' | append:logo -%}
+						{%- assign show_logo = section.settings[show_logo] -%}
+
+						{%- if show_logo -%}
+
+							<li class="landing_form__logos_item">
+								{%- render 'icon', icon:logo, class:'landing_form__logos_icon' -%}
+							</li>
+
+						{%- endif -%}
+
+					{%- endfor -%}
+
+				</nav>
+
+			</div>
+
+		</div>
+
+		<div class="landing_form">
+
+			<div class="container landing_guarantee__container">
+
+				<img class="landing_guarantee__img" src="{{ section.settings.guarantee_img | img_url:'120x120', crop:'center' }}" alt="{{ section.settings.guarantee_img.alt }}">
+
+				<h2 class="landing_guarantee__title">{{ section.settings.guarantee_title }}</h2>
+
+				<p class="landing_guarantee__description">{{ section.settings.guarantee_description }}</p>
+
+			</div>
+
+		</div>
+
+		<div class="landing_form">
+
+			<div class="container landing_images__container">
+
+				{%- for block in section.blocks -%}
+					<div class="landing_images__item">
+						<img src="{{ block.settings.image | img_url:'235x235', crop:'center' }}" alt="{{ block.settings.image.alt }}">
+					</div>
+				{%- endfor -%}
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+	"name": "Landing: Part 1",
+	"max_blocks": 12,
+	"settings": [
+		{
+			"type": "header",
+			"content": "Header"
+		},
+		{
+			"type": "text",
+			"id": "header_flag_info",
+			"label": "Flag info",
+			"default": "Made in the USA"
+		},
+
+
+		{
+			"type": "header",
+			"content": "Coupon"
+		},
+		{
+			"type": "text",
+			"id": "coupon_text__1",
+			"label": "Text #1",
+			"default": "25% off"
+		},
+		{
+			"type": "text",
+			"id": "coupon_text__2",
+			"label": "Text #2",
+			"default": "Activated"
+		},
+		{
+			"type": "text",
+			"id": "coupon_text__3",
+			"label": "Text #3",
+			"default": "Your first time buyer discount has been activated"
+		},
+		{
+			"type": "text",
+			"id": "coupon_text__4",
+			"label": "Text #4",
+			"default": "Limited time offer - Expires 04/24/2020"
+		},
+
+
+		{
+			"type": "header",
+			"content": "Slider"
+		},
+		{
+			"type": "image_picker",
+			"id": "slide_1",
+			"label": "Image #1"
+		},
+		{
+			"type": "image_picker",
+			"id": "slide_2",
+			"label": "Image #2"
+		},
+		{
+			"type": "image_picker",
+			"id": "slide_3",
+			"label": "Image #3"
+		},
+		{
+			"type": "image_picker",
+			"id": "slide_4",
+			"label": "Image #4"
+		},
+		{
+			"type": "textarea",
+			"id": "slider_title",
+			"label": "Slider title",
+			"default": "Our US Made, Delicious Chews Boost The Function Of Your Dog's Joints & Connective Tissue, Helping Renew Muscle Strength And Strong Bones For A Happy, Active Life!"
+		},
+		{
+			"type": "textarea",
+			"id": "slider_text",
+			"label": "Slider text",
+			"default": "We pride ourselves on providing only the best products for your pets, helping them feel happy, strong and healthy. This is why we’re offering our Joint Care Mobility Chews at a huge discount, so you can see how much happier your dog can be!"
+		},
+		{
+			"type": "text",
+			"id": "slider_btn_text",
+			"label": "Slider button text",
+			"default": "Yes, my dog needs this"
+		},
+		{
+			"type": "url",
+			"id": "slider_btn_url",
+			"label": "Slider button link"
+		},
+
+
+		{
+			"type": "header",
+			"content": "Icons section"
+		},
+		{
+			"type": "select",
+			"id": "icons_1__icon",
+			"label": "Icon #1",
+			"options": [
+				{
+					"value": "icon_flag",
+					"label": "Flag"
+				},
+				{
+					"value": "icon_vet",
+					"label": "Vet"
+				},
+				{
+					"value": "icon_fda",
+					"label": "FDA"
+				},
+				{
+					"value": "icon_nobs",
+					"label": "NO BS"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"id": "icons_1__text",
+			"label": "Icon #1 text",
+			"default": "Made in the USA"
+		},
+		{
+			"type": "select",
+			"id": "icons_2__icon",
+			"label": "Icon #2",
+			"options": [
+				{
+					"value": "icon_flag",
+					"label": "Flag"
+				},
+				{
+					"value": "icon_vet",
+					"label": "Vet"
+				},
+				{
+					"value": "icon_fda",
+					"label": "FDA"
+				},
+				{
+					"value": "icon_nobs",
+					"label": "NO BS"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"id": "icons_2__text",
+			"label": "Icon #2 text",
+			"default": "Vet Formulated"
+		},
+		{
+			"type": "select",
+			"id": "icons_3__icon",
+			"label": "Icon #3",
+			"options": [
+				{
+					"value": "icon_flag",
+					"label": "Flag"
+				},
+				{
+					"value": "icon_vet",
+					"label": "Vet"
+				},
+				{
+					"value": "icon_fda",
+					"label": "FDA"
+				},
+				{
+					"value": "icon_nobs",
+					"label": "NO BS"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"id": "icons_3__text",
+			"label": "Icon #3 text",
+			"default": "FDA-Regulated Facility"
+		},
+		{
+			"type": "select",
+			"id": "icons_4__icon",
+			"label": "Icon #4",
+			"options": [
+				{
+					"value": "icon_flag",
+					"label": "Flag"
+				},
+				{
+					"value": "icon_vet",
+					"label": "Vet"
+				},
+				{
+					"value": "icon_fda",
+					"label": "FDA"
+				},
+				{
+					"value": "icon_nobs",
+					"label": "NO BS"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"id": "icons_4__text",
+			"label": "Icon #4 text",
+			"default": "NO BS 90-day Warranty"
+		},
+
+
+		{
+			"type": "header",
+			"content": "Form section"
+		},
+		{
+			"type": "richtext",
+			"id": "form_tagline",
+			"label": "Tagline"
+		},
+		{
+			"type": "text",
+			"id": "form_part_1__title",
+			"label": "Part #1: Title",
+			"default": "1. Select Frequency"
+		},
+		{
+			"type": "text",
+			"id": "form_part_1__one_time",
+			"label": "One time purchase label",
+			"default": "One time purchase"
+		},
+		{
+			"type": "text",
+			"id": "form_part_1__recurring",
+			"label": "Recurring purchase label",
+			"default": "Monthy Autoship"
+		},
+		{
+			"type": "text",
+			"id": "form_part_2__title",
+			"label": "Part #2: Title",
+			"default": "2. Select Package"
+		},
+		{
+			"type": "product",
+			"id": "form_part_2__product_1",
+			"label": "Product #1"
+		},
+		{
+			"type": "product",
+			"id": "form_part_2__product_2",
+			"label": "Product #2"
+		},
+		{
+			"type": "product",
+			"id": "form_part_2__product_upsell",
+			"label": "Upsell Product"
+		},
+		{
+			"type": "text",
+			"id": "form_info_btn_text",
+			"label": "Form button text",
+			"default": "Add to cart"
+		},
+		{
+			"type": "text",
+			"id": "form_info_label",
+			"label": "Form info label"
+		},
+		{
+			"type": "richtext",
+			"id": "form_shipping_label",
+			"label": "Form shipping label"
+		},
+		{
+			"type": "checkbox",
+			"id": "form_logo_paypal",
+			"label": "Show PayPal logo",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "form_logo_visa",
+			"label": "Show VISA logo",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "form_logo_mastercard",
+			"label": "Show MasterCard logo",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "form_logo_amex",
+			"label": "Show AMEX logo",
+			"default": true
+		},
+
+
+		{
+			"type": "header",
+			"content": "Guarantee section"
+		},
+		{
+			"type": "image_picker",
+			"id": "guarantee_img",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "guarantee_title",
+			"label": "Title",
+			"default": "90 Day Money-Back Guarantee - It Works Or Your Money Back"
+		},
+		{
+			"type": "textarea",
+			"id": "guarantee_description",
+			"label": "Description",
+			"default": "Our #1 goal here at Wuffes is to ensure you are 100% satisfied . And if you're not entirely happy with your purchase we will refund your money in full, or exchange the goods. All we ask is that you contact our customer services and then return the product to us."
+		},
+
+
+		{
+			"type": "header",
+			"content": "Problem/Solution section"
+		},
+
+
+
+
+		// {
+		// 	"type": "checkbox",
+		// 	"id": "show_payment_icons",
+		// 	"label": "Show payment icons",
+		// 	"default": false
+		// },
+		// {
+		// 	"type": "text",
+		// 	"id": "title",
+		// 	"label": "Heading",
+		// 	"default": {
+		// 		"en": "Quick links"
+		// 	}
+		// },
+		// {
+		// 	"type": "link_list",
+		// 	"id": "menu",
+		// 	"label": "Menu",
+		// 	"default": "footer"
+		// },
+
+		{
+			"type": "header",
+			"content": "—"
+		}
+	],
+
+	"blocks": [
+		{
+			"type": "image",
+			"name": "Image",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

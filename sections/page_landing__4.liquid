@@ -1,0 +1,61 @@
+<div class="landing_solutions">
+
+	<div class="container landing_solutions__container">
+
+		<h2 class="landing_solutions__title">{{ section.settings.title }}</h2>
+
+		{%- for block in section.blocks -%}
+			<div class="landing_solutions__item">
+				<div class="landing_solutions__item_img">
+					<img  src="{{ block.settings.image | img_url:'160x160', crop:'center' }}" alt="{{ block.settings.image.alt }}">
+				</div>
+
+				<h3 class="landing_solutions__item_title">{{ block.settings.title }}</h3>
+
+				<p class="landing_solutions__item_text">{{ block.settings.text }}</p>
+
+			</div>
+
+		{%- endfor -%}
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Part 4: solutions",
+	"max_blocks": 3,
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Your Pups Problems are a thing of the past!"
+		}
+	],
+	"blocks": [
+		{
+			"type": "item",
+			"name": "Item",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "textarea",
+					"id": "text",
+					"label": "Text"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

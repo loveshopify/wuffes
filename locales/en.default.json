@@ -1,0 +1,24 @@
+{
+  "general": {
+    "accessibility": {
+      "item": "Content",
+      "list": {
+        "item": "Content"
+      }
+    }
+  },
+  "sections": {
+    "header": {
+      "item": "Content",
+      "list": {
+        "item": "Content"
+      }
+    },
+    "footer": {
+      "item": "Content",
+      "list": {
+        "item": "Content"
+      }
+    }
+  }
+}

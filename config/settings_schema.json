@@ -1,0 +1,450 @@
+[
+
+// THEME INFO /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+	"name": "theme_info",
+	"theme_name": "alpha",
+	"theme_author": "Vladimir Tsirulnikov",
+	"theme_version": "1.1",
+	"theme_documentation_url": "https://github.com/vladimir-tsirulnikov",
+	"theme_support_url": "https://github.com/vladimir-tsirulnikov"
+},
+
+// TYPOGRAPHY /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+	"name": {
+		"en": "Typography"
+	},
+	"settings": [
+		{
+			"type": "header",
+			"content": "Base font settings"
+		},
+		{
+			"type": "font_picker",
+			"id": "base_font",
+			"label": "Base font",
+			"default": "helvetica_n4"
+		},
+		{
+			"type": "range",
+			"id": "base_font_size",
+			"label": "Base font size",
+			"default": 14,
+			"min": 12,
+			"max": 16,
+			"step": 1,
+			"unit": "px"
+		},
+		{
+			"type": "color",
+			"id": "base_font_color",
+			"label": "Base font color",
+			"default": "#555"
+		},
+
+		{
+			"type": "header",
+			"content": "Heading font settings"
+		},
+		{
+			"type": "font_picker",
+			"id": "heading_font",
+			"label": "Heading font",
+			"default": "helvetica_n4"
+		},
+		{
+			"type": "range",
+			"id": "heading_font_size",
+			"label": "Heading font size",
+			"default": 24,
+			"min": 18,
+			"max": 40,
+			"step": 1,
+			"unit": "px"
+		},
+		{
+			"type": "color",
+			"id": "heading_font_color",
+			"label": "Heading font color",
+			"default": "#333"
+		},
+
+		{
+			"type": "header",
+			"content": "Links"
+		},
+		{
+			"type": "color",
+			"id": "links_color",
+			"label": "Links color",
+			"default": "#333"
+		},
+		{
+			"type": "color",
+			"id": "links_color__hover",
+			"label": "Links hover color",
+			"default": "#555"
+		},
+
+		{
+			"type": "header",
+			"content": "Regular buttons"
+		},
+		{
+			"type": "color",
+			"id": "btn_bg_color",
+			"label": "Background color",
+			"default": "#555"
+		},
+		{
+			"type": "color",
+			"id": "btn_text_color",
+			"label": "Text color",
+			"default": "#fff"
+		},
+		{
+			"type": "color",
+			"id": "btn_bg_color__hover",
+			"label": "Hover background color",
+			"default": "#888"
+		},
+		{
+			"type": "color",
+			"id": "btn_text_color__hover",
+			"label": "Hover text color",
+			"default": "#fff"
+		},
+
+		{
+			"type": "header",
+			"content": "Outline buttons"
+		},
+		{
+			"type": "color",
+			"id": "btn_outline_bg_color",
+			"label": "Border color",
+			"default": "#555"
+		},
+		{
+			"type": "color",
+			"id": "btn_outline_text_color",
+			"label": "Text color",
+			"default": "#555"
+		},
+		{
+			"type": "color",
+			"id": "btn_outline_bg_color__hover",
+			"label": "Hover background color",
+			"default": "#888"
+		},
+		{
+			"type": "color",
+			"id": "btn_outline_text_color__hover",
+			"label": "Hover text color",
+			"default": "#fff"
+		},
+
+
+
+		// {
+		// 	"type": "header",
+		// 	"content": "Headings and buttons"
+		// },
+		// {
+		// 	"type": "font_picker",
+		// 	"id": "type_header_font",
+		// 	"label": {
+		// 		"en": "Font"
+		// 	},
+		// 	"default": "helvetica_n7"
+		// },
+		// {
+		// 	"type": "range",
+		// 	"id": "type_header_base_size",
+		// 	"label": {
+		// 		"en": "Heading base size"
+		// 	},
+		// 	"default": 26,
+		// 	"min": 20,
+		// 	"max": 36,
+		// 	"step": 1,
+		// 	"unit": "px"
+		// },
+
+		{
+			"type": "header",
+			"content": "—"
+		}
+	]
+},
+
+// COLORS /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+	"name": {
+		"en": "Theme colors"
+	},
+	"settings": [
+		{
+			"type": "header",
+			"content": "General theme colors"
+		},
+		{
+			"type": "color",
+			"id": "page_bg_color",
+			"label": "Page background color",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "header_bg_color",
+			"label": "Header background color",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "footer_bg_color",
+			"label": "Footer background color",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "border_color",
+			"label": "Border color",
+			"default": "#eeeeee"
+		},
+
+		{
+			"type": "header",
+			"content": "Other colors"
+		},
+		{
+			"type": "color",
+			"id": "color_1",
+			"label": "Color #1",
+			"default": "#ffffff"
+		},
+		{
+			"type": "color",
+			"id": "color_2",
+			"label": "Color #2",
+			"default": "#333333"
+		},
+		{
+			"type": "color",
+			"id": "color_3",
+			"label": "Color #3",
+			"default": "#f1574b"
+		},
+		{
+			"type": "color",
+			"id": "color_4",
+			"label": "Color #4",
+			"default": "#fffcc1"
+		},
+		{
+			"type": "color",
+			"id": "color_5",
+			"label": "Color #5",
+			"default": "#f7f5f3"
+		},
+		{
+			"type": "color",
+			"id": "color_6",
+			"label": "Color #6",
+			"default": "#21BD9A"
+		},
+		{
+			"type": "color",
+			"id": "color_7",
+			"label": "Color #7",
+			"default": "#73d00f"
+		},
+		{
+			"type": "color",
+			"id": "color_8",
+			"label": "Color #8",
+			"default": "#1E1732"
+		}
+	]
+},
+
+// SOCIAL MEDIA ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// {
+// 	"name": {
+// 		"en": "Social media"
+// 	},
+// 	"settings": [
+// 		{
+// 			"type": "checkbox",
+// 			"id": "share_facebook",
+// 			"label": {
+// 				"en": "Share on Facebook"
+// 			},
+// 			"default": true
+// 		},
+// 		{
+// 			"type": "checkbox",
+// 			"id": "share_twitter",
+// 			"label": {
+// 				"en": "Tweet on Twitter"
+// 			},
+// 			"default": true
+// 		},
+// 		{
+// 			"type": "checkbox",
+// 			"id": "share_pinterest",
+// 			"label": {
+// 				"en": "Pin on Pinterest"
+// 			},
+// 			"default": true
+// 		},
+// 		{
+// 			"type": "header",
+// 			"content": {
+// 				"en": "Social accounts"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_twitter_link",
+// 			"label": {
+// 				"en": "Twitter"
+// 			},
+// 			"info": {
+// 				"en": "https:\/\/twitter.com\/shopify"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_facebook_link",
+// 			"label": {
+// 				"en": "Facebook"
+// 			},
+// 			"info": {
+// 				"en": "https:\/\/facebook.com\/shopify"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_pinterest_link",
+// 			"label": {
+// 				"en": "Pinterest"
+// 			},
+// 			"info": {
+// 				"en": "https:\/\/pinterest.com\/shopify"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_instagram_link",
+// 			"label": {
+// 				"en": "Instagram"
+// 			},
+// 			"info": {
+// 				"en": "http:\/\/instagram.com\/shopify"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_tumblr_link",
+// 			"label": {
+// 				"en": "Tumblr"
+// 			},
+// 			"info": {
+// 				"en": "http:\/\/shopify.tumblr.com"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_snapchat_link",
+// 			"label": {
+// 				"en": "Snapchat"
+// 			},
+// 			"info": {
+// 				"en": "https:\/\/www.snapchat.com\/add\/shopify"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_youtube_link",
+// 			"label": {
+// 				"en": "YouTube"
+// 			},
+// 			"info": {
+// 				"en": "https:\/\/www.youtube.com\/shopify"
+// 			}
+// 		},
+// 		{
+// 			"type": "text",
+// 			"id": "social_vimeo_link",
+// 			"label": {
+// 				"en": "Vimeo"
+// 			},
+// 			"info": {
+// 				"en": "https:\/\/vimeo.com\/shopify"
+// 			}
+// 		}
+// 	]
+// },
+
+// FAVICON ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+	"name": {
+		"en": "Favicon"
+	},
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "favicon",
+			"label": {
+				"en": "Favicon image"
+			},
+			"info": {
+				"en": "Will be scaled down to 32 x 32px"
+			}
+		}
+	]
+},
+
+// REVIEWS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+	"name": "Reviews",
+	"settings": [
+		{
+			"type": "text",
+			"id": "reviews_title",
+			"label": "Title",
+			"default": "Great"
+		},
+		{
+			"type": "range",
+			"id": "reviews_rating",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Rating",
+			"default": 4
+		},
+		{
+			"type": "range",
+			"id": "reviews_min",
+			"min": 100,
+			"max": 5000,
+			"step": 100,
+			"label": "Minimal reviews quantity",
+			"default": 2000
+		},
+		{
+			"type": "range",
+			"id": "reviews_max",
+			"min": 100,
+			"max": 5000,
+			"step": 100,
+			"label": "Maximal reviews quantity",
+			"default": 2500
+		}
+	]
+}
+
+]

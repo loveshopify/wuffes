@@ -1,0 +1,61 @@
+<div class="landing_compare">
+
+	<div class="container landing_compare__container">
+
+		<h2 class="landing_compare__title">{{ section.settings.title }}</h2>
+
+		{%- for block in section.blocks -%}
+			<div class="landing_compare__item">
+				<div class="landing_compare__item_img">
+					<img src="{{ block.settings.image | img_url:'480x320', crop:'center' }}" alt="{{ block.settings.image.alt }}">
+
+					<h3 class="landing_compare__item_title landing_compare__item_title__{{ forloop.index }}">{{ block.settings.title }}</h3>
+				</div>
+
+				<div class="landing_compare__item_text landing_compare__item_text__{{ forloop.index }}">{{ block.settings.text | replace:'<p>','<p><i></i>' }}</div>
+
+			</div>
+
+		{%- endfor -%}
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Part 5: compare",
+	"max_blocks": 2,
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "You’re using the wrong supplement!"
+		}
+	],
+	"blocks": [
+		{
+			"type": "item",
+			"name": "Item",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": "Text"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

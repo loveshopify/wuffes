@@ -1,0 +1,37 @@
+<div class="landing_images">
+
+	<div class="container landing_images__container">
+
+		<div class="row no-gutters row-cols-sm-3">
+
+			{%- for block in section.blocks -%}
+				<div class="landing_images__item">
+					<img src="{{ block.settings.image | img_url:'235x235', crop:'center' }}" alt="{{ block.settings.image.alt }}">
+				</div>
+			{%- endfor -%}
+
+		</div>
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Part 2: images",
+	"max_blocks": 12,
+	"blocks": [
+		{
+			"type": "image",
+			"name": "Image",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

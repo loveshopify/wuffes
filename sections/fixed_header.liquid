@@ -1,0 +1,63 @@
+{% schema %}
+{
+	"name": {
+		"en": "Header"
+	},
+	// "max_blocks": 4,
+	"settings": [
+		{
+			"type": "header",
+			"content": {
+				"en": "Payment methods"
+			}
+		},
+		{
+			"type": "checkbox",
+			"id": "show_payment_icons",
+			"label": {
+				"en": "Show payment icons"
+			},
+			"default": false
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": {
+				"en": "Heading"
+			},
+			"default": {
+				"en": "Quick links"
+			}
+		},
+		{
+			"type": "link_list",
+			"id": "menu",
+			"label": {
+				"en": "Menu"
+			},
+			"default": "footer"
+		}
+	],
+
+	"blocks": [
+		{
+			"type": "link_list",
+			"name": {
+				"en": "Menu"
+			},
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"label": {
+						"en": "Heading"
+					},
+					"default": {
+						"en": "Quick links"
+					}
+				}
+			]
+		}
+	]
+}
+{% endschema %}

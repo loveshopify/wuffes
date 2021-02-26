@@ -1,0 +1,152 @@
+{%- capture icon_facebook -%}
+	{%- render 'icon', icon:'facebook', class:'landing_footer__item_icon' -%}
+{%- endcapture -%}
+
+{%- capture icon_instagram -%}
+	{%- render 'icon', icon:'instagram', class:'landing_footer__item_icon' -%}
+{%- endcapture -%}
+
+{%- capture icon_twitter -%}
+	{%- render 'icon', icon:'twitter', class:'landing_footer__item_icon' -%}
+{%- endcapture -%}
+
+<div class="landing_footer">
+
+	<div class="container landing_footer__container">
+
+		<div class="landing_footer__logo_wrapper">
+
+			<a class="landing_footer__logo" href="{{ page.url }}">
+				{%- render 'asset', asset:'logo', class:'landing_footer__logo_img' -%}
+			</a>
+
+		</div>
+
+		{%- for block in section.blocks -%}
+
+			{%- case block.type -%}
+				{%- when 'navigation' -%}
+
+					<div class="landing_footer__item landing_footer__item_navigation">
+
+						<div class="landing_footer__item_1">
+
+							<h4 class="landing_footer__item_title">{{ linklists[block.settings.links_1].title }}</h4>
+
+							<div class="landing_footer__item_content">
+								{%- for link in linklists[block.settings.links_1].links -%}
+									<p>
+										<a href="{{ link.url }}">{{ link.title }}</a>
+									</p>
+								{%- endfor -%}
+							</div>
+
+						</div>
+
+						<div class="landing_footer__item_2">
+
+							<h4 class="landing_footer__item_title landing_footer__item_title__placeholder">&nbsp;</h4>
+
+							<div class="landing_footer__item_content">
+								{%- for link in linklists[block.settings.links_2].links -%}
+									<p>
+										<a href="{{ link.url }}">{{ link.title }}</a>
+									</p>
+								{%- endfor -%}
+							</div>
+
+						</div>
+
+					</div>
+
+				{%- when 'contacts' -%}
+
+					<div class="landing_footer__item landing_footer__item_contacts">
+
+						<div class="landing_footer__item_1">
+
+							<h4 class="landing_footer__item_title">{{ block.settings.part_1_title }}</h4>
+
+							<div class="landing_footer__item_content">
+								{{ block.settings.part_1_content | replace:'[facebook]', icon_facebook | replace:'[instagram]', icon_instagram | replace:'[twitter]', icon_twitter }}
+							</div>
+
+						</div>
+
+						<div class="landing_footer__item_2">
+
+							<h4 class="landing_footer__item_title">{{ block.settings.part_2_title }}</h4>
+
+							<div class="landing_footer__item_content">
+								{{ block.settings.part_2_content | replace:'[facebook]', icon_facebook | replace:'[instagram]', icon_instagram | replace:'[twitter]', icon_twitter }}
+							</div>
+
+						</div>
+
+					</div>
+
+			{%- endcase -%}
+
+		{%- endfor -%}
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Footer",
+	"blocks": [
+		{
+			"type": "navigation",
+			"name": "Navigation",
+			"settings": [
+				{
+					"type": "link_list",
+					"id": "links_1",
+					"label": "Links: part #1"
+				},
+				{
+					"type": "link_list",
+					"id": "links_2",
+					"label": "Links: part #2"
+				}
+			]
+		},
+		{
+			"type": "contacts",
+			"name": "Contacts",
+			"settings": [
+				{
+					"type": "header",
+					"content": "Part #1"
+				},
+				{
+					"type": "text",
+					"id": "part_1_title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "part_1_content",
+					"label": "Content"
+				},
+				{
+					"type": "header",
+					"content": "Part #2"
+				},
+				{
+					"type": "text",
+					"id": "part_2_title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "part_2_content",
+					"label": "Content"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

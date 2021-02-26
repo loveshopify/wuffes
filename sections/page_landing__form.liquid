@@ -1,0 +1,261 @@
+{%- assign product_1 = all_products[section.settings.form_part_2__product_1] -%}
+
+{%- for tag in product_1.tags -%}
+	{%- if tag contains 'discount_percent' -%}
+		{%- assign product_1_discount = tag | remove:'discount_percent:' -%}
+	{%- endif -%}
+{%- endfor -%}
+
+{%- assign product_2 = all_products[section.settings.form_part_2__product_2] -%}
+
+{%- for tag in product_2.tags -%}
+	{%- if tag contains 'discount_percent' -%}
+		{%- assign product_2_discount = tag | remove:'discount_percent:' -%}
+	{%- endif -%}
+{%- endfor -%}
+
+{%- assign product_upsell = all_products[section.settings.form_part_2__product_upsell] -%}
+
+<div class="landing_form">
+
+	<div class="landing_form__tagline">
+		<div class="container landing_form__container">{{ section.settings.form_tagline }}</div>
+	</div>
+
+	<div class="container landing_form__container">
+
+		<h2 class="landing_form__title">{{ section.settings.part_1__title }}</h2>
+
+		<input id="purchase_type__onetime" class="form_control form_control__purchase" type="radio" name="purchase_type" value="one-time">
+		<label for="purchase_type__onetime" class="landing_form__frequency">{{ section.settings.part_1__onetime }}</label>
+
+		<input id="purchase_type__recurring" class="form_control form_control__purchase" type="radio" name="purchase_type" value="recurring" checked="checked">
+		<label for="purchase_type__recurring" class="landing_form__frequency">{{ section.settings.part_1__subscription }}{%- render 'icon', icon:'refresh', class:'landing_form__frequency_icon' -%}</label>
+
+		<h2 class="landing_form__title">{{ section.settings.part_2__title }}</h2>
+
+		<div class="landing_form__product_tabs">
+
+			<input id="product_single" class="form_control form_control__product" type="radio" name="product_type" value="single" data-index="1" data-price="{{ product_1.price | money }}" data-discount="{{ product_1_discount }}" checked="checked">
+			<label for="product_single" class="landing_form__product">
+				<span class="landing_form__product_title">{{ product_1.title }}</span>
+				<span class="landing_form__product_price">{{ product_1.price | money }}</span>
+				<span class="landing_form__product_discount">{{ product_1_discount }}%<br>OFF</span>
+			</label>
+
+			<input id="product_pack" class="form_control form_control__product" type="radio" name="product_type" value="pack" data-index="2" data-price="{{ product_2.price | money }}" data-discount="{{ product_2_discount }}">
+			<label for="product_pack" class="landing_form__product">
+				<span class="landing_form__product_title">{{ product_2.title }}</span>
+				<span class="landing_form__product_price">{{ product_2.price | money }}</span>
+				<span class="landing_form__product_discount">{{ product_2_discount }}%<br>OFF</span>
+			</label>
+
+		</div>
+
+		<div class="landing_form__reviews">
+
+			{%- render 'widget_trustpilot' -%}
+
+		</div>
+
+		<div id="landing_form__product_slider" class="swiper-container landing_form__product_slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="{{ product_1.featured_image | img_url:'450x450', crop:'center' }}" alt="">
+				</div>
+
+				<div class="swiper-slide">
+					<img src="{{ product_2.featured_image | img_url:'450x450', crop:'center' }}" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div id="landing_form__price" class="landing_form__price">{{ product_1.price | money }}</div>
+
+		<div class="landing_form__save">You save <strong><span id="landing_form__save">{{ product_1_discount }}</span>% off</strong> & FREE Shipping</div>
+
+		<input id="product_upsell" class="form_control" type="checkbox" name="upsell" value="upsell">
+		<label for="product_upsell" class="landing_form__upsell">
+			<img class="landing_form__upsell_img" src="{{ product_upsell.featured_image | img_url:'60x60', crop:'center' }}" alt="">
+			<span class="landing_form__upsell_text">Add Our Best-Selling {{ product_upsell.title }} to your order for {{ product_upsell.price | money }} (50% Off)</span>
+		</label>
+
+		<button class="landing_btn landing_form__btn">{{ section.settings.button_text }}{%- render 'icon', icon:'angle_right_double', class:'landing_btn__icon' -%}</button>
+
+		<p class="landing_form__info_label">{{ section.settings.info_label }}</p>
+
+		<div class="landing_form__shipping_label">{{ section.settings.shipping_label }}</div>
+
+		<nav class="landing_form__logos">
+
+			{%- assign payment_logos = 'paypal,visa,mastercard,amex' -%}
+			{%- assign payment_logos = payment_logos | split:',' -%}
+
+			{%- for logo in payment_logos -%}
+
+				{%- assign show_logo = 'logo_' | append:logo -%}
+				{%- assign show_logo = section.settings[show_logo] -%}
+
+				{%- if show_logo -%}
+
+					<li class="landing_form__logos_item">
+						{%- render 'icon', icon:logo, class:'landing_form__logos_icon' -%}
+					</li>
+
+				{%- endif -%}
+
+			{%- endfor -%}
+
+		</nav>
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Form",
+	"settings": [
+		{
+			"type": "richtext",
+			"id": "form_tagline",
+			"label": "Tagline"
+		},
+
+		{
+			"type": "header",
+			"content": "Form part #1"
+		},
+		{
+			"type": "text",
+			"id": "part_1__title",
+			"label": "Part #1: Title",
+			"default": "1. Select Frequency"
+		},
+		{
+			"type": "text",
+			"id": "part_1__onetime",
+			"label": "One time purchase label",
+			"default": "One time purchase"
+		},
+		{
+			"type": "text",
+			"id": "part_1__subscription",
+			"label": "Recurring purchase label",
+			"default": "Monthy Autoship"
+		},
+		{
+			"type": "richtext",
+			"id": "part_1__details",
+			"label": "Details label"
+		},
+
+		{
+			"type": "header",
+			"content": "Form part #2"
+		},
+		{
+			"type": "text",
+			"id": "part_2__title",
+			"label": "Part #2: Title",
+			"default": "2. Select Package"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Form button text",
+			"default": "Add to cart"
+		},
+
+		{
+			"type": "header",
+			"content": "Additional info"
+		},
+		{
+			"type": "text",
+			"id": "info_label",
+			"label": "Form info label"
+		},
+		{
+			"type": "richtext",
+			"id": "shipping_label",
+			"label": "Form shipping label"
+		},
+
+		{
+			"type": "header",
+			"content": "Logos"
+		},
+		{
+			"type": "checkbox",
+			"id": "logo_paypal",
+			"label": "Show PayPal logo",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "logo_visa",
+			"label": "Show VISA logo",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "logo_mastercard",
+			"label": "Show MasterCard logo",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "logo_amex",
+			"label": "Show AMEX logo",
+			"default": true
+		}
+	],
+
+	"blocks": [
+		{
+			"type": "product",
+			"name": "Product",
+			"settings": [
+				{
+					"type": "header",
+					"content": "Product"
+				},
+				{
+					"type": "product",
+					"id": "product",
+					"label": "Choose product"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Choose image",
+					"info": "This image will replace default product image"
+				}
+			]
+		},
+		{
+			"type": "upsell",
+			"name": "Upsell",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "header",
+					"content": "Upsell"
+				},
+				{
+					"type": "product",
+					"id": "upsell",
+					"label": "Choose upsell product"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Choose image",
+					"info": "This image will replace default product image"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

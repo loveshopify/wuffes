@@ -1,0 +1,129 @@
+{%- assign reviews_number = section.blocks | size -%}
+{%- assign slides_number__int = reviews_number | divided_by:3 -%}
+{%- assign slides_number__mod = reviews_number | modulo:3 -%}
+
+{%- if slides_number__mod > 0 -%}
+	{%- assign slides_number = slides_number__int | plus:1 -%}
+{%- else -%}
+	{%- assign slides_number = slides_number__int -%}
+{%- endif -%}
+
+<div class="landing_reviews">
+
+	<div class="container landing_reviews__container">
+
+		{%- render 'widget_trustpilot' -%}
+
+		<div id="landing_reviews__slider" class="landing_reviews__slider swiper-container">
+
+			<div class="swiper-wrapper">
+
+				{%- for slide in (1..slides_number) -%}
+
+					{%- assign slide_offset = forloop.index | times:3 | minus:3 -%}
+
+					<div class="swiper-slide">
+
+						{%- for block in section.blocks offset:slide_offset limit:3 -%}
+
+							<div id="landing_reviews__item_{{ block.id }}" class="landing_reviews__item {% if block.settings.text.size > 230 %}landing_reviews__item_collapsed{% endif %}">
+
+								<div class="landing_reviews__item_header">
+
+									<div class="landing_reviews__item_header__left">
+
+										{%- assign rating = 'landing_reviews__item_rating rating_' | append:block.settings.rating -%}
+										{%- render 'asset', asset:'trustpilot_rating', class:rating -%}
+
+										<span class="landing_reviews__item_name">by {{ block.settings.name }}</span>
+
+									</div>
+
+									<span class="landing_reviews__item_date">{{ block.settings.date }}</span>
+
+								</div>
+
+								<h3 class="landing_reviews__item_title">{{ block.settings.title }}</h3>
+
+								<p class="landing_reviews__item_text">{{ block.settings.text }}</p>
+
+								<a class="landing_reviews__item_readmore" data-target="#landing_reviews__item_{{ block.id }}" href="#">Read more</a>
+
+							</div>
+
+						{%- endfor -%}
+
+					</div>
+
+				{%- endfor -%}
+
+			</div>
+
+			<div id="landing_reviews__slider_pagination" class="landing_reviews__slider_pagination"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% schema %}
+{
+	"name": "Part 3: reviews",
+	"blocks": [
+		{
+			"type": "review",
+			"name": "Review",
+			"settings": [
+				{
+					"type": "select",
+					"id": "rating",
+					"label": "Rating",
+					"options": [
+						{
+							"value": "1",
+							"label": "1 star"
+						},
+						{
+							"value": "2",
+							"label": "2 stars"
+						},
+						{
+							"value": "3",
+							"label": "3 stars"
+						},
+						{
+							"value": "4",
+							"label": "4 stars"
+						},
+						{
+							"value": "5",
+							"label": "5 stars"
+						}
+					]
+				},
+				{
+					"type": "text",
+					"id": "name",
+					"label": "Name"
+				},
+				{
+					"type": "text",
+					"id": "date",
+					"label": "Date"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "textarea",
+					"id": "text",
+					"label": "Text"
+				}
+			]
+		}
+	]
+}
+{% endschema %}
